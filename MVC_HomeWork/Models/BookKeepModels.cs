@@ -17,27 +17,14 @@ namespace MVC_HomeWork.Models
             int countID = 0;
             //紀錄列表產生
             List<Models.ViewModels.BookKeepViewModel.Record> records = new List<ViewModels.BookKeepViewModel.Record>();
-            countID++;
-            records.Add(new Models.ViewModels.BookKeepViewModel.Record()
-            { countID = countID, countCS = "支出", CreateTime = DateTime.Now, Money = 6000 });
-            countID++;
-            records.Add(new Models.ViewModels.BookKeepViewModel.Record()
-            { countID = countID, countCS = "收入", CreateTime = DateTime.Now, Money = 7000 });
-            countID++;
-            records.Add(new Models.ViewModels.BookKeepViewModel.Record()
-            { countID = countID, countCS = "支出", CreateTime = DateTime.Now, Money = 8000 });
-            countID++;
-            records.Add(new Models.ViewModels.BookKeepViewModel.Record()
-            { countID = countID, countCS = "支出", CreateTime = DateTime.Now, Money = 9000 });
+            for(int RR =0;RR < 100;RR++)
+            {                
+                records.Add(new Models.ViewModels.BookKeepViewModel.Record()
+                { countID = RR+1, countCS = "支出", CreateTime = DateTime.Now, Money = 6000 });
+            }
             return records;
         }
 
-        public string test
-        {
-            get
-            {
-                return "test";
-            }
-        }
+
     }
 }

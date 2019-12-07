@@ -11,8 +11,7 @@ namespace MVC_HomeWork.Controllers
         // GET: BookKeep
         public ActionResult Index()
         {
-            BookKeepModels models = new BookKeepModels();
-            
+            BookKeepModels models = new BookKeepModels(); 
             return View(models);
         }
     }
