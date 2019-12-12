@@ -1,8 +1,8 @@
 ﻿
+@model MVC_HomeWork.Models.BookKeepModels
 @{
     ViewBag.Title = "Index";
 }
-@model MVC_HomeWork.Models.BookKeepModels
 
 <div class="well">
     <form class="form-horizontal">
@@ -51,19 +51,21 @@
                 <th>日期</th>
                 <th>金額</th>
             </tr>
-            @{int count = 0;}
+            @if (Model.GetRecords().Count != 0)
+            {
+                @{int count = 0;}
                 @foreach (var o in Model.GetRecords())
                 {
                     count++;
-                <tr>
-                    <td>@count</td>
-                    <td>@o.countCS</td>
-                    <td>@o.CreateTime.ToString("yyyy-MM-dd")</td>
-                    <td>@o.Money.ToString("#,0")</td>
-                </tr>
+                    <tr>
+                        <td>@count</td>
+                        <td>@o.countCS</td>
+                        <td>@o.CreateTime.ToString("yyyy-MM-dd")</td>
+                        <td>@o.Money.ToString("#,0")</td>
+                    </tr>
+                }
             }
 
-          
         </table>
     </div>
 </div>

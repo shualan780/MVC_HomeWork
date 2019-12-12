@@ -8,10 +8,15 @@ namespace MVC_HomeWork.Controllers
 {
     public class BookKeepController : Controller
     {
+        private BookKeepModels models;
+
+        public BookKeepController()
+        {
+            models = new BookKeepModels();
+        }
         // GET: BookKeep
         public ActionResult Index()
         {
-            BookKeepModels models = new BookKeepModels(); 
             return View(models);
         }
     }
