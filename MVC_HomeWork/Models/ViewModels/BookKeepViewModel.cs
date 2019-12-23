@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
@@ -15,11 +16,11 @@ namespace MVC_HomeWork.Models.ViewModels
             /// <summary>
             /// 記帳編號
             /// </summary>
-            public int countID { get; set; }
+            public int CountID { get; set; }
             /// <summary>
-            /// 記帳類別
+            /// 紀錄帳目類別
             /// </summary>
-            public string countCS { get; set; }
+            public CountCS CountCS { get; set; }         
             /// <summary>
             /// 紀錄建立時間
             /// </summary>
@@ -30,5 +31,14 @@ namespace MVC_HomeWork.Models.ViewModels
             public decimal Money { get; set; }
         }
 
+        /// <summary>
+        /// 帳目類別選項
+        /// </summary>
+        public enum CountCS
+        {
+            支出,
+            收入
+        }
     }
+   
 }

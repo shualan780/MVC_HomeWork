@@ -53,13 +53,13 @@
             </tr>
             @if (Model.GetRecords().Count != 0)
             {
-                @{int count = 0;}
-                @foreach (var o in Model.GetRecords())
+                int count = 0;
+                foreach (var o in Model.GetRecords())
                 {
                     count++;
                     <tr>
                         <td>@count</td>
-                        <td>@o.countCS</td>
+                        <td>@o.CountCS</td>
                         <td>@o.CreateTime.ToString("yyyy-MM-dd")</td>
                         <td>@o.Money.ToString("#,0")</td>
                     </tr>
